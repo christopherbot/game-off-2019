@@ -6,7 +6,8 @@
   "scripts": {
     "start": "webpack-dev-server --hot --open --config config/webpack.dev.js",
     "start:prod": "http-server dist/ -o",
-    "build": "webpack --config config/webpack.prod.js"
+    "build": "webpack --config config/webpack.prod.js",
+    "build-gh-pages": "yarn build && rm -rf assets && cp -r ./dist/* ./"
   },
   "repository": {
     "type": "git",
